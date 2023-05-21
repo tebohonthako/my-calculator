@@ -101,5 +101,5 @@ numMultiply.addEventListener("click", () => {
 
 numAnswer.addEventListener("click", () => {
   const num = document.getElementById("output").textContent;
-  document.getElementById("test").innerHTML = Function(`return ${num}`)();
+  document.getElementById("output").innerHTML = Function(`return ${num}`)();
 });
