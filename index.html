@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teboo's iPhone Calculator</title>
-    <!-- JavaScript linked  -->
-    <script defer src="script.js"></script>
 
     <!-- Bootstrap Linked  -->
     <link
@@ -29,6 +27,7 @@
     <main id="main">
       <form id="calc_form">
         <header class="calc_header">
+          <!-- User output on screen  -->
           <input
             type="text"
             disabled
@@ -39,7 +38,9 @@
         </header>
         <footer class="calc_footer">
           <div class="btn_group">
+            <!-- R E S E T   B U T T O N -->
             <button
+              id="clear"
               data-type="clear"
               type="reset"
               value="clear"
@@ -47,13 +48,32 @@
             >
               AC
             </button>
-            <button data-type="operator" value="invert" class="btn btn-grey">
+            <!-- End of reset button  -->
+            <!-- N E G A T I V E   O P E R A T O R   -->
+            <button
+              id="negative"
+              data-type="operator"
+              value="invert"
+              class="btn btn-grey"
+            >
               +/-
             </button>
-            <button data-type="operator" value="%" class="btn btn-grey">
+            <!-- P E R C E N T  O P E R A T O R   -->
+            <button
+              id="percent"
+              data-type="operator"
+              value="%"
+              class="btn btn-grey arithmetic"
+            >
               %
             </button>
-            <button data-type="operator" value="/" class="btn btn-orange">
+            <!-- END OF % OPERATOR -->
+            <button
+              id="divide"
+              data-type="operator"
+              value="/"
+              class="btn btn-orange"
+            >
               ÷
             </button>
           </div>
@@ -66,60 +86,128 @@
             >
               7
             </button>
-            <button data-type="operand" value="8" class="btn btn-dark-grey">
+            <button
+              id="8"
+              data-type="operand"
+              value="8"
+              class="btn btn-dark-grey"
+            >
               8
             </button>
-            <button data-type="operand" value="9" class="btn btn-dark-grey">
+            <button
+              id="9"
+              data-type="operand"
+              value="9"
+              class="btn btn-dark-grey"
+            >
               9
             </button>
-            <button data-type="operator" value="*" class="btn btn-orange">
+            <!-- M U L T I P L I C A T I O N   O P E R A T O R   -->
+            <button
+              id="multiply"
+              data-type="operator"
+              value="*"
+              class="btn btn-orange arithmetic"
+            >
               x
             </button>
-          </div>
-          <div class="btn_group">
-            <button data-type="operand" value="4" class="btn btn-dark-grey">
-              4
-            </button>
-            <button data-type="operand" value="5" class="btn btn-dark-grey">
-              5
-            </button>
-            <button data-type="operand" value="6" class="btn btn-dark-grey">
-              6
-            </button>
-            <button data-type="operator" value="-" class="btn btn-orange">
-              -
-            </button>
-          </div>
-          <div class="btn_group">
-            <button data-type="operand" value="1" class="btn btn-dark-grey">
-              1
-            </button>
-            <button data-type="operand" value="2" class="btn btn-dark-grey">
-              2
-            </button>
-            <button data-type="operand" value="3" class="btn btn-dark-grey">
-              3
-            </button>
-            <button data-type="operator" value="+" class="btn btn-orange">
-              +
-            </button>
+            <!-- End of Multiplication operator  -->
           </div>
           <div class="btn_group">
             <button
+              id="4"
+              data-type="operand"
+              value="4"
+              class="btn btn-dark-grey"
+            >
+              4
+            </button>
+            <button
+              id="5"
+              data-type="operand"
+              value="5"
+              class="btn btn-dark-grey"
+            >
+              5
+            </button>
+            <button
+              id="6"
+              data-type="operand"
+              value="6"
+              class="btn btn-dark-grey"
+            >
+              6
+            </button>
+            <!-- S U B T R A C T I O N   O P E R A T O R   -->
+            <button
+              id="subtract"
+              data-type="operator"
+              value="-"
+              class="btn btn-orange arithmetic"
+            >
+              -
+            </button>
+            <!-- END OF SUBTRACTION OPERATOR -->
+          </div>
+          <div class="btn_group">
+            <button
+              id="1"
+              data-type="operand"
+              value="1"
+              class="btn btn-dark-grey"
+            >
+              1
+            </button>
+            <button
+              id="2"
+              data-type="operand"
+              value="2"
+              class="btn btn-dark-grey"
+            >
+              2
+            </button>
+            <button
+              id="3"
+              data-type="operand"
+              value="3"
+              class="btn btn-dark-grey"
+            >
+              3
+            </button>
+            <!-- A D D I T I O N   O P E R A T O R   -->
+            <button
+              id="add"
+              data-type="operator"
+              value="+"
+              class="btn btn-orange arithmetic"
+            >
+              +
+            </button>
+            <!-- END OF SUBTRACTION OPERATOR -->
+          </div>
+          <!-- Button zero 0  -->
+          <div class="btn_group">
+            <button
+              id="0"
               data-type="operand"
               value="0"
               class="btn btn-grow btn-dark-grey zero"
             >
               0
             </button>
+            <!-- Button .  -->
             <button
+              id="dot"
               data-type="operand"
               value="."
               class="btn btn-dark-grey roundness"
             >
               .
             </button>
+            <!-- The Calculate Button Answer(=) -->
             <button
+              id="answer"
+              onclick="calculate()"
               value="="
               data-type="operator"
               class="btn btn-orange roundness"
@@ -130,5 +218,11 @@
         </footer>
       </form>
     </main>
+    <p class="codedby">
+      Coded by
+      <a class="mygit" href="https://github.com/tebohonthako">Teboo </a>❤
+    </p>
+    <!-- JavaScript linked  -->
+    <script defer src="./script.js"></script>
   </body>
 </html>

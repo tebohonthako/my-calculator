@@ -1,28 +1,105 @@
-// Prevent the page from reloading everytime form is submitted.
+// Number Buttons or operands and operators functionality
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+const numdot = document.getElementById("dot");
+const numAdd = document.getElementById("add");
+const numSubtract = document.getElementById("subtract");
+const numMultiply = document.getElementById("multiply");
+const numDivide = document.getElementById("divide");
+const numAnswer = document.getElementById("answer");
+const clear = document.getElementById("clear");
+const percent = document.getElementById("percent");
+const negative = document.getElementById("negative");
+const num9 = document.getElementById("9");
+const num8 = document.getElementById("8");
+const num7 = document.getElementById("7");
+const num6 = document.getElementById("6");
+const num5 = document.getElementById("5");
+const num4 = document.getElementById("4");
+const num3 = document.getElementById("3");
+const num2 = document.getElementById("2");
+const num1 = document.getElementById("1");
+const num0 = document.getElementById("0");
+
+clear.addEventListener("click", () => {
+  document.getElementById("output").innerHTML = "";
 });
 
-// Displaying the value of our operands (numbers) when we click on the button.
-const output = document.getElementById("output");
-const form = document.getElementById("calc_form");
+percent.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "-";
+});
+negative.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "-/+";
+});
 
-//Selects all buttons and puts them in a nodeList(array)
-const operand_btns = document.querySelectorAll("button[data-type=operand]");
+num9.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "9";
+});
 
-let is_operator = false;
-operand_btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    if (output.value == "0") {
-      output.value = e.target.value;
-    } else if (is_operator) {
-      is_operator = false;
-      output.value = e.target.value;
-    } else if (output.value.includes(".")) {
-      output.value = output.value + "" + e.target.value.replace(".", "");
-    } else {
-      output.value = output.value + "" + e.target.value;
-    }
-  });
+num8.addEventListener("click", () => {
+  document.getElementById("output.calc_output").innerHTML += "8";
+});
+
+num7.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "7";
+  console.log("9");
+});
+
+num6.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "6";
+  console.log("9");
+});
+
+num5.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "5";
+  console.log("9");
+});
+
+num4.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "4";
+  console.log("9");
+});
+
+num3.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "3";
+  console.log("9");
+});
+
+num2.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "2";
+  console.log("9");
+});
+
+num1.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "1";
+  console.log("9");
+});
+
+num0.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "0";
+  console.log("9");
+});
+
+numdot.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += ".";
+});
+
+numAdd.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "+";
+});
+
+numSubtract.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "-";
+});
+
+numDivide.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "/";
+});
+
+numMultiply.addEventListener("click", () => {
+  document.getElementById("output").innerHTML += "*";
+});
+
+numAnswer.addEventListener("click", () => {
+  const num = document.getElementById("output").textContent;
+  document.getElementById("test").innerHTML = Function(`return ${num}`)();
 });
