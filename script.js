@@ -1,11 +1,5 @@
 // Number Buttons or operands and operators functionality
 
-const numdot = document.getElementById("dot");
-const numAdd = document.getElementById("add");
-const numSubtract = document.getElementById("subtract");
-const numMultiply = document.getElementById("multiply");
-const numDivide = document.getElementById("divide");
-const numAnswer = document.getElementById("answer");
 const clear = document.getElementById("clear");
 const percent = document.getElementById("percent");
 const negative = document.getElementById("negative");
@@ -19,13 +13,19 @@ const num3 = document.getElementById("3");
 const num2 = document.getElementById("2");
 const num1 = document.getElementById("1");
 const num0 = document.getElementById("0");
+const numdot = document.getElementById("dot");
+const numAdd = document.getElementById("add");
+const numSubtract = document.getElementById("subtract");
+const numMultiply = document.getElementById("multiply");
+const numDivide = document.getElementById("divide");
+const numAnswer = document.getElementById("answer");
 
 clear.addEventListener("click", () => {
   document.getElementById("output").innerHTML = "";
 });
 
 percent.addEventListener("click", () => {
-  document.getElementById("output").innerHTML += "-";
+  document.getElementById("output").innerHTML += "%";
 });
 negative.addEventListener("click", () => {
   document.getElementById("output").innerHTML += "-/+";
@@ -36,7 +36,8 @@ num9.addEventListener("click", () => {
 });
 
 num8.addEventListener("click", () => {
-  document.getElementById("output.calc_output").innerHTML += "8";
+  document.getElementById("output").innerHTML += "8";
+  console.log("9");
 });
 
 num7.addEventListener("click", () => {
@@ -101,5 +102,5 @@ numMultiply.addEventListener("click", () => {
 
 numAnswer.addEventListener("click", () => {
   const num = document.getElementById("output").textContent;
-  document.getElementById("output").innerHTML = Function(`return ${num}`)();
+  document.getElementById("").innerHTML = Function(`return ${num}`)();
 });
