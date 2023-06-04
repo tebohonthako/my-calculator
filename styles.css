@@ -124,8 +124,8 @@ input[type="text"] {
   color: #ffffff;
   text-align: right;
   position: absolute;
-  right: 20rem;
-  top: 36rem;
+  right: 28rem;
+  top: 39rem;
   font-weight: bold;
 }
 .mygit {
@@ -137,4 +137,5 @@ input[type="text"] {
   height: "400";
   padding: 2rem;
   color: #fff;
+  text-align: right;
 }
