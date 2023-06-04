@@ -5,4 +5,7 @@
  - subtraction
  - multiplication and 
  - division. 
- - The app will has a user interface with buttons and input fields to facilitate user interaction.
+ - The app has a user interface with buttons and input fields to facilitate user interaction.
+
+#  Run the program 
+open in live server :  index.html 
