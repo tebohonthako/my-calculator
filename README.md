@@ -1,6 +1,6 @@
 # my-calculator
 
-## Asimple calculator app that can perform basic arithmetic operations like
+## An ios/iphone clone simple calculator app that can perform basic arithmetic operations like
 ## - addition 
 ## - subtraction
 ## - multiplication and 
