@@ -52,7 +52,7 @@ num9.addEventListener("click", () => {
 
 
 num8.addEventListener("click", () => {  
-  document.getElementById("display-box").innerHTML += "8";
+  document.getElementById("display").innerHTML += "8";
 })
 
 

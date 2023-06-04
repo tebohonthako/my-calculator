@@ -44,8 +44,9 @@ input[type="text"] {
 }
 
 .calc_header {
-  margin-top: 1.5rem;
-  padding: 0.9rem;
+  margin-top: 5rem;
+  padding: 0.5rem;
+
 }
 
 .calc_footer > * + * {
@@ -138,4 +139,7 @@ input[type="text"] {
   padding: 2rem;
   color: #fff;
   text-align: right;
+}
+#display {
+  font-size: 3rem;
 }
